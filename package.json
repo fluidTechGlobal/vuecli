@@ -1,0 +1,36 @@
+{
+  "name": "fluidtechglobal-vuecli",
+  "version": "1.0.7",
+  "description": "This package is meant to ease vue development especially when making the services that connect to the backend. It is still in development and more updates are to come.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vuecli": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bnb/metaverse.git"
+  },
+  "keywords": [
+    "vue",
+    "vue js",
+    "vuecli",
+    "vue-cli",
+    "vuex",
+    "ftg-vue-clie",
+    "ftg",
+    "fluidtechglobal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "capitalize": "^1.0.0",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.12.2",
+    "fs": "0.0.1-security",
+    "titleize": "^1.0.0"
+  }
+}
