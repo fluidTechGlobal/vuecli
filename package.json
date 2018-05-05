@@ -1,5 +1,5 @@
 {
-  "name": "vuexcli",
+  "name": "fluidtechglobal-vuex-cli",
   "version": "1.1.2",
   "description": "This package is meant to ease vue development especially when making the services that connect to the backend. It is still in development and more updates are to come.",
   "main": "main.js",
