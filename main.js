@@ -197,7 +197,7 @@ function makeVuexFolder (folder) {
       "  getAll" + firstCapitalPlural +": mainUrl + 'get_all',\n" +
       "  get" + firstCapitalSingular +": mainUrl + 'get_single',\n" +
       "  edit" + firstCapitalSingular +": mainUrl + 'update',\n" +
-      "  getDeleted" + firstCapitalPlural +": mainUrl + 'delete'\n" +
+      "  getDeleted" + firstCapitalPlural +": mainUrl + 'delete,'\n" +
       "  delete" + firstCapitalSingular +": mainUrl + 'delete'\n" +
       "}");
     writeStream.end();
