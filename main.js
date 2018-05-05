@@ -15,10 +15,10 @@ console.log(
   )
 );
 console.log(chalk.yellow('Developed and maintained by http://fluidtechglobal.com \n'));
-console.log(chalk.green('Get command list by typing $ vuecli --help'));
+console.log(chalk.green('Get command list by typing $ vuexcli --help'));
 
 program
-  .version('1.1.0')
+  .version('1.1.1')
   // .option('-c, --component <component_name>', 'Create a component')
   .option('-s, --store', 'Create a Vuex Store')
   .option('-f, --vuex_folder', 'Create a Folder with a store.js, mutations.js and actions')
