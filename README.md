@@ -1,7 +1,7 @@
-#FLUID TECH GLOBAL VUE CLI
+#FLUID TECH GLOBAL VUEX CLI
 
 ###Installation
-        npm install -g fluidtechglobal-vuecli 
+        npm i -g fluidtechglobal-vuex-cli
         
 
 #### Creating the VUEX module store file
