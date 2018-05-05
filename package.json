@@ -1,13 +1,13 @@
 {
   "name": "fluidtechglobal-vuecli",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "This package is meant to ease vue development especially when making the services that connect to the backend. It is still in development and more updates are to come.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "vuecli": "./index.js"
+    "vuecli": "./main.js"
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@octokit/rest": "^15.2.7",
     "capitalize": "^1.0.0",
+    "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
     "commander": "^2.12.2",
+    "configstore": "^3.1.2",
+    "figlet": "^1.2.0",
     "fs": "0.0.1-security",
-    "titleize": "^1.0.0"
+    "inquirer": "^5.2.0",
+    "lodash": "^4.17.10",
+    "minimist": "^1.2.0",
+    "simple-git": "^1.92.0",
+    "titleize": "^1.0.0",
+    "touch": "^3.1.0"
   }
 }
