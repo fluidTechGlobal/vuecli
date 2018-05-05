@@ -18,7 +18,7 @@ console.log(chalk.yellow('Developed and maintained by http://fluidtechglobal.com
 console.log(chalk.green('Get command list by typing $ vuexcli --help'));
 
 program
-  .version('1.1.2')
+  .version('1.1.5')
   // .option('-c, --component <component_name>', 'Create a component')
   .option('-s, --store', 'Create a Vuex Store')
   .option('-f, --vuex_folder', 'Create a Folder with a store.js, mutations.js and actions')
@@ -136,7 +136,7 @@ function makeVuexFolder (folder) {
       "    })\n" +
       "  },\n" +
       "  update_" + startSingular + " (context, data) {\n" +
-      "    Vue.http.post(" + urls + ".post" + firstCapitalSingular + ", data).then(function (response) {\n" +
+      "    Vue.http.patch(" + urls + ".edit" + firstCapitalSingular + ", data).then(function (response) {\n" +
       "      context.dispatch('get_all_" + startPlural + "')\n" +
       "      router.push({\n" +
       "        name: data.redirect_url\n" +
@@ -145,7 +145,7 @@ function makeVuexFolder (folder) {
       "     })\n" +
       "  },\n" +
       "  delete_" + startSingular + " (context, publicId) {\n" +
-      "    Vue.http.get(" + urls + ".delete" + firstCapitalSingular + " + publicId).then(function (response) {\n" +
+      "    Vue.http.delete(" + urls + ".delete" + firstCapitalSingular + " + publicId).then(function (response) {\n" +
       "      alert(response.data.message)\n" +
       "      context.commit('GET_DELETED_" + mutationPlural + "', response.data)\n" +
       "      router.push({\n" +
@@ -198,6 +198,7 @@ function makeVuexFolder (folder) {
       "  get" + firstCapitalSingular +": mainUrl + 'get_single',\n" +
       "  edit" + firstCapitalSingular +": mainUrl + 'update',\n" +
       "  getDeleted" + firstCapitalPlural +": mainUrl + 'delete'\n" +
+      "  delete" + firstCapitalSingular +": mainUrl + 'delete'\n" +
       "}");
     writeStream.end();
 
