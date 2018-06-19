@@ -91,13 +91,13 @@ function makeVuexFolder (folder) {
     var actions = 'actions.js';
     var writeStream = fs.createWriteStream(folder_name + '/' + actions);
     writeStream.write("" +
-      "import Vue from 'vue'\n" +
+      "import axios from 'axios'\n" +
       "import {" + urls + "} from './urls'\n" +
       "import router from '../../router/index'\n" +
       "\n" +
       "export default {\n" +
       "  get_all_" + startPlural + " (context) {\n" +
-      "    Vue.http.get(" + urls + ".getAll" + firstCapitalPlural + ").then(function (response) {\n" +
+      "    axios.get(" + urls + ".getAll" + firstCapitalPlural + ").then(function (response) {\n" +
       "      context.commit('GET_ALL_" + mutationPlural + "', response.data)\n" +
       "      context.dispatch('loading_false')\n" +
       "    }).catch(function () {\n" +
@@ -107,7 +107,7 @@ function makeVuexFolder (folder) {
       "    })\n" +
       "  },\n" +
       "  get_deleted_" + startPlural + " (context) {\n" +
-      "    Vue.http.get(" + urls + ".getDeleted" + firstCapitalPlural + ").then(function (response) {\n" +
+      "    axios.get(" + urls + ".getDeleted" + firstCapitalPlural + ").then(function (response) {\n" +
       "      context.commit('GET_DELETED_" + mutationPlural + "', response.data)\n" +
       "      context.dispatch('loading_false')\n" +
       "    }).catch(function () {\n" +
@@ -117,7 +117,7 @@ function makeVuexFolder (folder) {
       "    })\n" +
       "  },\n" +
       "  get_" + startSingular + " (context, publicId) {\n" +
-      "    Vue.http.get(" + urls + ".get" + firstCapitalSingular + " + publicId).then(function (response) {\n" +
+      "    axios.get(" + urls + ".get" + firstCapitalSingular + " + publicId).then(function (response) {\n" +
       "      context.commit('GET_" + mutationSingular + "', response.data)\n" +
       "      context.dispatch('loading_false')\n" +
       "    }).catch(function () {\n" +
@@ -127,7 +127,7 @@ function makeVuexFolder (folder) {
       "    })\n" +
       "  },\n" +
       "  post_" + startSingular + " (context, data) {\n" +
-      "    Vue.http.post(" + urls + ".post" + firstCapitalSingular + ", data).then(function (response) {\n" +
+      "    axios.post(" + urls + ".post" + firstCapitalSingular + ", data).then(function (response) {\n" +
       "      context.dispatch('get_all_" + startPlural + "')\n" +
       "      router.push({\n" +
       "        name: data.redirect_url\n" +
@@ -136,7 +136,7 @@ function makeVuexFolder (folder) {
       "    })\n" +
       "  },\n" +
       "  update_" + startSingular + " (context, data) {\n" +
-      "    Vue.http.patch(" + urls + ".edit" + firstCapitalSingular + ", data).then(function (response) {\n" +
+      "    axios.patch(" + urls + ".edit" + firstCapitalSingular + ", data).then(function (response) {\n" +
       "      context.dispatch('get_all_" + startPlural + "')\n" +
       "      router.push({\n" +
       "        name: data.redirect_url\n" +
@@ -145,7 +145,7 @@ function makeVuexFolder (folder) {
       "     })\n" +
       "  },\n" +
       "  delete_" + startSingular + " (context, publicId) {\n" +
-      "    Vue.http.delete(" + urls + ".delete" + firstCapitalSingular + " + publicId).then(function (response) {\n" +
+      "    axios.delete(" + urls + ".delete" + firstCapitalSingular + " + publicId).then(function (response) {\n" +
       "      alert(response.data.message)\n" +
       "      context.commit('GET_DELETED_" + mutationPlural + "', response.data)\n" +
       "      router.push({\n" +
@@ -155,7 +155,7 @@ function makeVuexFolder (folder) {
       "    })\n" +
       "  },\n" +
       "  restore_" + startSingular + " (context, publicId) {\n" +
-      "    Vue.http.get(" + urls + ".restore" + firstCapitalSingular + " + publicId).then(function (response) {\n" +
+      "    axios.get(" + urls + ".restore" + firstCapitalSingular + " + publicId).then(function (response) {\n" +
       "      alert(response.data.message)\n" +
       "      context.commit('GET_ALL_" + mutationPlural + "', response.data)\n" +
       "      router.push({\n" +
